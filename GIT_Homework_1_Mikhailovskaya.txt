@@ -1,0 +1,344 @@
+GIT Homework 1
+Group 26
+Mikhailovskaya Irina
+
+Для выполнения задания у вас должен быть установлен для Windows - GitBash.
+Создан аккаунт в GitHub
+
+Все шаги сценария выполняйте в терминале GitBush, Terminal, в папке под гитом.
+
+Как отправить ДЗ на проверку.
+ 1. Создайте текстоовый файл как в первом ДЗ по Terminal - touch new_1.txt
+ 2. Сценарий перенесите в этот файл. 
+ 3. На против каждого действия - напишите команду в GitBash
+
+Файл со сценарием и ссылку на свой гит хаб отправляйте менторам на проверку.
+
+
+JSON
+ 4. Создать внешний репозиторий c названием JSON - cоздаю репозиторий в Github с названием JSON
+ 5. Клонировать репозиторий JSON на локальный компьютер - git clone https://github.com/Vekriona/JSON.git
+ 6. Внутри локального JSON создать файл “new.json” : 
+	1) захожу в репозиторий JSON - cd JSON
+	2) создаю файл - touch new.json
+ 7. Добавить файл под гит - git add new.json
+ 8. Закоммитить файл - git commit -m "add new.json"
+ 9. Отправить файл на внешний GitHub репозиторий - git push
+ 10. Отредактировать содержание файла “new.json” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате JSON:
+	1) вхожу в режим редактирование файла - vim new.json
+	2) захожу в режим INSERT нажав на клавиатре i
+	3) ввожу текст:
+{
+	"lastName": "Mikhailovskaya",
+	"firstName": "Irina",
+	"middleName": "Konstantinovna",
+	"age": 28,
+	"numberOfPets": 1,
+	"futureDesiredSalary": 150000
+}
+	4) для выхода из режима редактирования нажимаю esc
+	5) для сохраниения файла и выхода ввожу команду - :wq
+ 11. Отправить изменения на внешний репозиторий:
+	Вариант 1:
+	1) git add new.json
+	2) git commit -m "add personal data in new.json"
+	3) git push
+	Вариант 2:
+	1) git commit -am "add personal data in new.json"
+	2) git push
+ 12. Создать файл preferences.json - touch preferences.json
+ 13. В файл preferences.json добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате JSON:
+	1) вхожу в режим редактирование файла - vim preferences.json
+	2) захожу в режим INSERT нажав на клавиатре i
+	3) ввожу текст:
+{
+	"favoriteMovie": "Les Miserables",
+	"favoriteSeries": "Anne of Green Gables",
+	"favoriteSeason": "winter",
+	"theCountryIWantToVisit": "Norway"
+}
+	4) для выхода из режима редактирования нажимаю esc
+	5) для сохраниения файла и выхода ввожу команду - :wq
+ 14. Создать файл skills.json добавить информацию о скиллах которые будут изучены на курсе в формате JSON:
+	1) touch skills.json
+	2) вхожу в режим редактирование файла - vim skills.json
+	3) захожу в режим INSERT нажав на клавиатре i
+	4) ввожу текст:
+{
+	"studentName": "Irina Mikhailovskaya",
+	"courseName": "Author's course by Vadim Ksendzov",
+	"skills": [
+		"basic theory",
+		"client-server architecture",
+		"methods of request to the server",
+		"server responses",
+		"structures of requests and responses",
+		"JSON and XML: structure",
+		"testing API",
+		"Removal and reading of logs",
+		"Postman",
+		"Fidler",
+		"VPN",
+		{"Dev Tools of web Browsers": [
+			"Google Chrome",
+			"FireFox"
+		]},
+		"mobile testing",
+		"feature of iOS, Android, guidelines",
+		"building iOS applications on Xcode",
+		"building Android applications on Android Studio",
+		"Interception of mobile traffic (sniffing) through Charles",
+		"Proxy settings for iOS and Android",
+		"Command line (terminal) Linux Ubuntu",
+		"Simple bash scripting, automation of routine tasks on the server",
+		"Access to remote servers",
+		{"SQL Basics": [
+			"Create",
+			"Delete",
+			"Drop",
+			"Insert Into",
+			"Select",
+			"From",
+			"Where",
+			"Join"
+		]},
+		"Git",
+		"Jmeter",
+		"Scrum development methodology",
+		"Python. Creation of your own client-server application"
+	]
+
+}
+	5) для выхода из режима редактирования нажимаю esc
+	6) для сохраниения файла и выхода ввожу команду - :wq
+ 15. Отправить сразу 2 файла на внешний репозиторий:
+	1) git add .
+	2) git commit -m "add preferences in preferences.json and add skills in skills.json"
+	3) git push 
+ 16. На веб интерфейсе создать файл bug_report.json - add file > create new file > bug_report.json
+ 17. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+ 18. На веб интерфейсе модифицировать файл bug_report.json, добавить баг репорт в формате JSON:
+{
+    "ID": "123",
+    "Priority": "Low",
+    "Severity": "Minor",
+    "Summary": "Закрывается окно редактирования при попытке изменения названия черновика на уже существующий",
+    "Author": "Irina Mikhailovskaya",
+    "Assigned To": "Vadim Ksendzov",
+    "Environment": "Firefox 79.0 (64 бит), Google Chrome 84.0.4147.105 (64 бит)",
+    "Description": [{
+        "STR": "1) Зайти в 'Материалы' и отсортировать по статусу материала 'Черновик'. 2)Выбрать ранее созданный черновик и нажать 'Редактировать'. 3)В окне редактирования изменить название материала на уже существующее. 4)Нажать 'Редактировать материал'.",
+        "Actual Result": "Появляется сообщение об ошибке, окно редактирования закрывается",
+        "Expectd Result": "Появляется сообщение об ошибке, окно редактирования остается открытым"}
+        ],
+    "Reproducibility": "Always",
+    "Attachment": "001.mp4"
+}
+ 19. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+ 20. Синхронизировать внешний и локальный репозиторий JSON - git pull
+
+
+XML
+ 21. Создать внешний репозиторий c названием XML - cоздаю репозиторий в Github с названием XML
+ 22. Клонировать репозиторий XML на локальный компьютер - git clone https://github.com/Vekriona/XML.git
+ 23. Внутри локального XML создать файл “new.xml” - 
+	1) захожу в репозиторий XML - cd XML
+	2) создаю файл - touch new.xml
+ 24. Добавить файл под гит - git add new.xml
+ 25. Закоммитить файл - git commit -m "add new.xml"
+ 26. Отправить файл на внешний GitHub репозиторий - git push
+ 27. Отредактировать содержание файла “new.xml” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате XML:
+	1) вхожу в режим редактирование файла - vim new.xml
+	2) захожу в режим INSERT нажав на клавиатре i
+	3) ввожу текст:
+<personalData>
+<lastName>Mikhaillovskaya</lastName>
+<firstName>Irina</firstName>
+<middleName>Konstantinovna</middleName>
+<age>28</age>
+<numberOfPets>1</numberOfPets>
+<futureDesiredSalary>150000</futureDesiredSalary>
+</personalData>
+	4) для выхода из режима редактирования нажимаю esc
+	5) для сохраниения файла и выхода ввожу команду - :wq
+ 28. Отправить изменения на внешний репозиторий:
+	1) git add new.xml
+	2) git commit -m "add personal data in new.xml"
+	3) git push
+ 29. Создать файл preferences.xml - touch preferences.xml
+ 30. В файл preferences.xml добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате XML:
+	1) вхожу в режим редактирование файла - vim preferences.xml
+	2) захожу в режим INSERT нажав на клавиатре i
+	3) ввожу текст:
+<preferences>
+<favoriteMovie>Les Miserables</favoriteMovie>
+<favoriteSeries>Anne of Green Gables</favoriteSeries>
+<favoriteSeason>winter</favoriteSeason>
+<theCountryIWantToVisit>Norway</theCountryIWantToVisit>
+</preferences>
+	4) для выхода из режима редактирования нажимаю esc
+	5) для сохраниения файла и выхода ввожу команду - :wq
+ 31. Создать файл skills.xml добавить информацию о скиллах которые будут изучены на курсе в формате XML:
+	1) touch skills.xml
+	2) вхожу в режим редактирование файла - vim skills.xml
+	3) захожу в режим INSERT нажав на клавиатре i
+	4) ввожу текст:
+<root>
+  <studentName>Irina Mikhailovskaya</studentName>
+  <courseName>Author&#x27;s course by Vadim Ksendzov</courseName>
+  <skills>basic theory</skills>
+  <skills>client-server architecture</skills>
+  <skills>methods of request to the server</skills>
+  <skills>server responses</skills>
+  <skills>structures of requests and responses</skills>
+  <skills>JSON and XML: structure</skills>
+  <skills>testing API</skills>
+  <skills>Removal and reading of logs</skills>
+  <skills>Postman</skills>
+  <skills>Fidler</skills>
+  <skills>VPN</skills>
+  <skills>
+    <Dev_Tools_of_web_Browsers>Google Chrome</Dev_Tools_of_web_Browsers>
+    <Dev_Tools_of_web_Browsers>FireFox</Dev_Tools_of_web_Browsers>
+  </skills>
+  <skills>mobile testing</skills>
+  <skills>feature of iOS, Android, guidelines</skills>
+  <skills>building iOS applications on Xcode</skills>
+  <skills>building Android applications on Android Studio</skills>
+  <skills>Interception of mobile traffic (sniffing) through Charles</skills>
+  <skills>Proxy settings for iOS and Android</skills>
+  <skills>Command line (terminal) Linux Ubuntu</skills>
+  <skills>Simple bash scripting, automation of routine tasks on the server</skills>
+  <skills>Access to remote servers</skills>
+  <skills>
+    <SQL_Basics>Create</SQL_Basics>
+    <SQL_Basics>Delete</SQL_Basics>
+    <SQL_Basics>Drop</SQL_Basics>
+    <SQL_Basics>Insert Into</SQL_Basics>
+    <SQL_Basics>Select</SQL_Basics>
+    <SQL_Basics>From</SQL_Basics>
+    <SQL_Basics>Where</SQL_Basics>
+    <SQL_Basics>Join</SQL_Basics>
+  </skills>
+  <skills>Git</skills>
+  <skills>Jmeter</skills>
+  <skills>Scrum development methodology</skills>
+  <skills>Python. Creation of your own client-server application</skills>
+</root>
+	5) для выхода из режима редактирования нажимаю esc
+	6) для сохраниения файла и выхода ввожу команду - :wq
+ 32. Сделать коммит в одну строку - git commit -am "add preferences in preferences.xml and add skills in skills.xml"
+ 33. Отправить сразу 2 файла на внешний репозиторий - git push 
+ 34. На веб интерфейсе создать файл bug_report.xml - Add file > Create new file
+ 35. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+ 36. На веб интерфейсе модифицировать файл bug_report.xml, добавить баг репорт в формате XML: нажимаю на файл bug_report.xml > edit this file . Ввожу текст:
+<root>
+  <ID>123</ID>
+  <Priority>Low</Priority>
+  <Severity>Minor</Severity>
+  <Summary>Закрывается окно редактирования при попытке изменения названия черновика на уже существующий</Summary>
+  <Author>Irina Mikhailovskaya</Author>
+  <Environment>Firefox 79.0 (64 бит), Google Chrome 84.0.4147.105 (64 бит)</Environment>
+  <Description>
+    <STR>1) Зайти в Материалы и отсортировать по статусу материала Черновик. 2)Выбрать ранее созданный черновик и нажать Редактировать. 3)В окне редактирования изменить название материала на уже существующее. 4)Нажать Редактировать материал</STR>
+    <Actual_Result>Появляется сообщение об ошибке, окно редактирования закрывается</Actual_Result>
+    <Expectd_Result>Появляется сообщение об ошибке, окно редактирования остается открытым</Expectd_Result>
+  </Description>
+  <Reproducibility>Always</Reproducibility>
+  <Attachment>001.mp4</Attachment>
+  <Assigned_To>Vadim Ksendzov</Assigned_To>
+</root>
+ 37. Сделать Commit changes (сохранить) изменения на веб интерфейсе - нажимаю Commit changes
+ 38. Синхронизировать внешний и локальный репозиторий XML - git pull
+
+TXT
+ 1. Создать внешний репозиторий c названием TXT - cоздаю репозиторий в Github с названием TXT
+ 2. Клонировать репозиторий TXT на локальный компьютер - git clone https://github.com/Vekriona/XML.git
+ 3. Внутри локального TXT создать файл “new.txt”:
+	1) захожу в репозиторий TXT - cd TXT
+	2) создаю файл - touch new.txt
+ 4. Добавить файл под гит - git add new.txt
+ 5. Закоммитить файл - git commit -m "add new.txt"
+ 6. Отправить файл на внешний GitHub репозиторий - git push
+ 7. Отредактировать содержание файла “new.txt” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате TXT:
+	1) вхожу в режим редактирование файла - vim new.txt
+	2) захожу в режим INSERT нажав на клавиатре i
+	3) ввожу текст:
+ФИО: Михайловская Ирина Константиновна
+Количество домашних животных: 1
+Будущая желаемая зарплата 150000
+	4) для выхода из режима редактирования нажимаю esc
+	5) для сохраниения файла и выхода ввожу команду - :wq
+ 8. Отправить изменения на внешний репозиторий:
+	1) git add new.txt
+	2) git commit -m "add personal data in new.txt"
+	3) git push
+ 9. Создать файл preferences.txt - touch preferences.txt
+ 10. В файл preferences.txt добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате TXT:
+	1) вхожу в режим редактирование файла - vim preferences.txt
+	2) захожу в режим INSERT нажав на клавиатре i
+	3) ввожу текст:
+Любимый фильм: Отверженные
+Любимый сериал: Энн из Зелёных крыш
+Любимое время года: зима
+Страна которую хотели бы посетить: Норвегия
+	4) для выхода из режима редактирования нажимаю esc
+	5) для сохраниения файла и выхода ввожу команду - :wq
+ 11. Создать файл skills.txt добавить информацию о скиллах которые будут изучены на курсе в формате TXT
+	1) touch skills.txt
+	2) вхожу в режим редактирование файла - vim skills.txt
+	3) захожу в режим INSERT нажав на клавиатре i
+	4) ввожу текст:
+1. Базовая теория (Что такое тестирование, багрепорты, документация, виды, методы, направления тестирования и т.п.) SDLC, STLC.
+2. Что такое клиент-серверная архитектура.
+3. HTTP Методы запросов на сервер.
+4. Коды ответов HTTP сервера.
+5. Структуры HTTP запросов и ответов.
+6. Что такое JSON, XML. Их структура.
+7. Тестирование API через Postman (JS, автотесты API).
+8. Снятие и чтение логов c внешнего сервера.
+9. Снифинг http web трафика через Charles и Fiddler.
+10. Dev Tools веб браузеров (Google Chrome, FireFox).
+11. VPN. (Как работает, зачем нужен, как использовать, варианты инструментов)
+12. Мобильное тестирование.
+13. Особенность iOS, Android, гайдлайны.
+14. Сборка iOS приложений на XCode. (У кого нет Mac компьютера, просто посмотрят)
+15. Сборка Android приложений на Android Studio.
+16. ADB (управление андройд девайсами).
+17. Настройка прокси и vpn на iOS и Android.
+18. Перехват (сниффинг) мобильного трафика через Charles и Fiddler на iOS и Android.
+19. Командная строка (terminal) Linux (копирование, создание, просмотр, перемещение файлов на серверах без графического интерфейса)
+20. Основы bash скриптинг, автоматизация рутинных задач на сервере.
+21. Доступ к удалённым серверам.
+22. Основы SQL (Create, Delete, Drop, Insert Into, Select, From, Where, Join).
+23. База данных Postgres (установка, настройка и использование).
+24. Нереляционная база данных Redis (установка, настройка и использование).
+25. Нагрузочное тестирование в Jmeter.
+26. Методология разработки Scrum.
+27. Python. (Изучение основ. Создание клиент серверного приложения)
+	5) для выхода из режима редактирования нажимаю esc
+	6) для сохраниения файла и выхода ввожу команду - :wq
+ 12. Сделать коммит в одну строку - git commit -am "add preferences.txt and skills.txt"
+ 13. Отправить сразу 2 файла на внешний репозиторий - git push
+ 14. На веб интерфейсе создать файл bug_report.txt - Repositories > TXT > Add file > Create new file > bug_report.txt
+ 15. Сделать Commit changes (сохранить) изменения на веб интерфейсе - нажимаю Createe commit file
+ 16. На веб интерфейсе модифицировать файл bug_report.txt, добавить баг репорт в формате TXT - нажимаю на файл bug_report.txt > edit this file . Ввожу текст:
+ID: 123.
+Priority: Low.
+Severity: Minor.
+Summary: Закрывается окно редактирования при попытке изменения названия черновика на уже существующий.
+Author: Irina Mikhailovskaya.
+Assigned To: Vadim Ksendzov.
+Environment: Firefox 79.0 (64 бит), Google Chrome 84.0.4147.105 (64 бит).
+Description: При попытке изменить название файла в разделе "Черновики" на уже существующее, после появления сообщения об ошибке окно редактирования закрывается и пользователя перекидывает на страницу "Материалы" со сброшенными фильтрами.
+STR: 
+1) Зайти в 'Материалы' и отсортировать по статусу материала "Черновик". 
+2) Выбрать ранее созданный черновик и нажать 'Редактировать'. 
+3) В окне редактирования изменить название материала на уже существующее. 
+4) Нажать "Редактировать материал".
+Actual Result: Появляется сообщение об ошибке, окно редактирования закрывается.
+Expectd Result: Появляется сообщение об ошибке, окно редактирования остается открытым.
+Reproducibility: Always.
+Attachment: 001.mp4.
+ 17. Сделать Commit changes (сохранить) изменения на веб интерфейсе - нажимаю Commit changes
+ 18. Синхронизировать внешний и локальный репозиторий TXT - git pull
